@@ -1,0 +1,25 @@
+<head>
+    <script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+</head>
+
+<body>
+    <h1> pdCa for User</h1>
+    <img src="./pdCa-logo.png" />
+
+    <script>
+        microsoftTeams.initialize();
+
+        microsoftTeams.settings.setValidityState(true);
+
+        microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: "https://d17j8u7dwyrz0l.cloudfront.net/",
+                contentUrl: "https://d17j8u7dwyrz0l.cloudfront.net/",
+                entityId: "e80c5643-6148-43ee-991d-5a8cc52e1abd",
+                suggestedDisplayName: "pdCaUser"
+            });
+            saveEvent.notifySuccess();
+        });
+
+    </script>
+</body>
